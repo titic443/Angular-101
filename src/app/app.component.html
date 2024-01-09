@@ -11,7 +11,44 @@
   [maxLabel]="myMaxLabel"
 ></app-max-min-meter> -->
 
-<app-max-min-meter
+<!-- <app-max-min-meter
   (doMinChanges)="doAppMinChange($event)"
   (doMaxChanges)="doAppMaxChange($event)"
-></app-max-min-meter>
+></app-max-min-meter> -->
+
+<!-- <app-square-flex [divWidth]="sqWidth" [divHeight]="sqHeight"></app-square-flex>
+<div [style.padding.px]="2">
+  <span>width:</span>
+  <button (click)="sqWidth = 50">50px</button>
+  <button (click)="sqWidth = 100">100px</button>
+  <button (click)="sqWidth = 500">500px</button>
+</div> -->
+<!-- <app-action-bar
+  [couter]="defaultCouter"
+  (numberChange)="defaultCouter = $event"
+  ></app-action-bar>
+  <app-square-flex [couterWidth]="defaultCouter"></app-square-flex> -->
+
+<!--
+  <app-action-bar [(couter)]="defaultCouter"></app-action-bar>
+  <app-square-flex [couterWidth]="defaultCouter"></app-square-flex> -->
+<!--
+<div *ngIf="activate; else elseTemplate">
+  <app-action-bar></app-action-bar>
+</div>
+<ng-template #elseTemplate>
+  <div>Not activate</div>
+</ng-template>
+<button (click)="activate = true">activate</button> -->
+
+<!-- <app-action-bar [inputDisplay]="true"></app-action-bar>
+<app-action-bar [inputDisplay]="false"></app-action-bar> -->
+
+<ul>
+  <li *ngFor="let item of cuntomerList; index as i">
+    {{ item }}<button (click)="removeCustomer(i)">removeCustomer</button>
+  </li>
+</ul>
+<input #inputValue type="text" [value]="'customer5'" />
+<button (click)="pushCustomer(inputValue.value)">push</button>
+<button (click)="unshiftCustomer(inputValue.value)">unshift</button>
